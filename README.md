@@ -1,5 +1,3 @@
-<img width="1600" height="800" alt="WhatsApp Image 2026-11-19 at 6 56 10 PM" src="https://github.com/user-attachments/assets/85cb3edd-42c4-4dcc-9258-b2b9c0fda23a" /># 📊 BDATL Engine — Indian Stock Market Sentiment & Anomaly Detection
-
 > Real-time sentiment analysis, price-anomaly detection, sector momentum and short-term price projection for Indian (NSE) stocks — with a Streamlit dashboard and an optional Hadoop/Spark distributed stack.
 
 ![Python](https://img.shields.io/badge/Python-3.10--3.12-blue?logo=python&logoColor=white)
