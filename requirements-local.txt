@@ -1,0 +1,10 @@
+# Local Windows dashboard + pandas/scikit-learn analytics (no Docker/Hadoop required)
+yfinance>=0.2.40
+feedparser>=6.0.10
+pandas>=2.1.0
+numpy>=1.26.0
+textblob>=0.17.1
+streamlit>=1.32.0
+plotly>=5.17.0
+altair>=5.1.0
+python-dotenv>=1.0.0

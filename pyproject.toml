@@ -1,0 +1,8 @@
+[project]
+name = "stockanalysisbda"
+version = "0.1.1"
+description = "Indian stock market sentiment and anomaly analytics project"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [{ name = "Arshad Kabir" }]
+dependencies = []

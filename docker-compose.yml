@@ -1,0 +1,85 @@
+# ============================================================================
+# Docker Compose for Hadoop/Spark Cluster (1 Master + 3 Slaves)
+#
+# Single machine:  docker-compose up --build
+# Multi-host:      Switch driver to 'overlay' and use Docker Swarm
+# ============================================================================
+
+networks:
+  hadoop-net:
+    driver: bridge
+
+services:
+  # ===================== MASTER NODE =====================
+  master:
+    build: .
+    image: bdatl-hadoop:latest
+    container_name: master
+    hostname: master
+    environment:
+      - NODE_ROLE=master
+    ports:
+      - "9870:9870"     # HDFS NameNode UI
+      - "9000:9000"     # HDFS IPC
+      - "8088:8088"     # YARN ResourceManager UI
+      - "8080:8080"     # Spark Master UI
+      - "7077:7077"     # Spark Master
+      - "4040:4040"     # Spark Application UI
+      - "8501:8501"     # Streamlit Dashboard
+      - "19888:19888"   # MapReduce History Server
+    volumes:
+      - master-hdfs-name:/hadoop/dfs/name
+      - ./src:/app/src
+    networks:
+      - hadoop-net
+
+  # ===================== SLAVE NODE 1 =====================
+  slave1:
+    build: .
+    image: bdatl-hadoop:latest
+    container_name: slave1
+    hostname: slave1
+    environment:
+      - NODE_ROLE=slave
+    volumes:
+      - slave1-hdfs-data:/hadoop/dfs/data
+    networks:
+      - hadoop-net
+    depends_on:
+      - master
+
+  # ===================== SLAVE NODE 2 =====================
+  slave2:
+    build: .
+    image: bdatl-hadoop:latest
+    container_name: slave2
+    hostname: slave2
+    environment:
+      - NODE_ROLE=slave
+    volumes:
+      - slave2-hdfs-data:/hadoop/dfs/data
+    networks:
+      - hadoop-net
+    depends_on:
+      - master
+
+  # ===================== SLAVE NODE 3 =====================
+  slave3:
+    build: .
+    image: bdatl-hadoop:latest
+    container_name: slave3
+    hostname: slave3
+    environment:
+      - NODE_ROLE=slave
+    volumes:
+      - slave3-hdfs-data:/hadoop/dfs/data
+    networks:
+      - hadoop-net
+    depends_on:
+      - master
+
+volumes:
+  master-hdfs-name:
+  slave1-hdfs-data:
+  slave2-hdfs-data:
+  slave3-hdfs-data:
