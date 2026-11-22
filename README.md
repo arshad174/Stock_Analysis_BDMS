@@ -1,4 +1,4 @@
-# 📊 BDATL Engine — Indian Stock Market Sentiment & Anomaly Detection
+<img width="1600" height="800" alt="WhatsApp Image 2026-11-19 at 6 56 10 PM" src="https://github.com/user-attachments/assets/85cb3edd-42c4-4dcc-9258-b2b9c0fda23a" /># 📊 BDATL Engine — Indian Stock Market Sentiment & Anomaly Detection
 
 > Real-time sentiment analysis, price-anomaly detection, sector momentum and short-term price projection for Indian (NSE) stocks — with a Streamlit dashboard and an optional Hadoop/Spark distributed stack.
 
@@ -35,15 +35,18 @@ The project supports two run modes:
 
 **Market sentiment overview — KPIs and watchlist performance indexed to 100**
 
-![Dashboard overview](docs/images/dashboard-overview.jpeg)
+<img width="1600" height="800" alt="WhatsApp Image 2026-11-19 at 6 56 10 PM" src="https://github.com/user-attachments/assets/b52a38e0-2016-4369-9fc1-f7adb5966f41" />
+
 
 **Recent anomaly alerts and sector momentum heatmap**
 
-![Anomaly alerts](docs/images/anomaly-alerts.jpeg)
+<img width="1600" height="852" alt="WhatsApp Image 2026-11-19 at 6 56 25 PM" src="https://github.com/user-attachments/assets/0532fdbb-de3d-4eaa-970f-426aaba984fc" />
+
 
 **Price analytics and future price prediction with hold-out metrics**
 
-![Price prediction](docs/images/price-prediction.jpeg)
+<img width="1555" height="621" alt="WhatsApp Image 2026-11-19 at 7 16 00 PM" src="https://github.com/user-attachments/assets/e0ac9f31-0236-4da0-b65a-2c2bb2bbaed8" />
+
 
 ---
 
